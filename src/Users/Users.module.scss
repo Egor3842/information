@@ -145,7 +145,7 @@ TR {
 .video{
    position: absolute;
    width: 400px;
-    height: 300px;
+    height: 100%;
     right: 0%;
     top:0%;
 }
@@ -163,7 +163,7 @@ TR {
 .Small{
     grid-area: S;
     width: 400px;
-    height: 300px;
+    height: 230px;
     box-shadow: 0 0 5px 2px;
     position: relative;
     background-color: white;
@@ -175,7 +175,7 @@ TR {
 .Big{
     grid-area: B;
     width: 810px;
-    height: 300px;
+    height: 230px;
     box-shadow: 0 0 5px 2px;
     position: relative;
     background-color: white;
@@ -197,17 +197,17 @@ TR {
 
 .age{
     position: relative;
-    top:1em;
+    top:0.5em;
     color: rgb(176, 176, 176);
 }
 .phone{
     position: relative;
-    top:2em;
+    top:1.3em;
 }
 .phrase{
     position: relative;
     width: 70%;
-    top:3em;
+    top:2em;
 }
 .star{
     position: relative;
