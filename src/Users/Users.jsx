@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './Users.module.scss'
 import Table from './Table'
+import find from '../images/find.png'
 import Show from './Show'
 
 
@@ -21,6 +22,18 @@ const Users = (props) => {
     }
     const TurnLang = (islangRus) => {
         props.ChooseLang(islangRus)
+    }
+    const UserText = (e) => {
+        let text=e.target.value;
+        props.WordToFind(text);
+
+    }
+    const IsClickedButton = () =>{
+        props.ClickButton(true)
+        props.WordToFind(' ')
+    }
+    const IsClickedField = () =>{
+        props.ClickButton(false)
     }
 
     return (
@@ -46,6 +59,11 @@ const Users = (props) => {
                         <button className={props.isTable === true ? s.active : s.notActive} onClick={() => props.TableShow(true)}> {props.islangRus === true ? 'Табилца' : 'Table'}</button>
                         <button className={props.isTable === false ? s.active : s.notActive} onClick={() => props.TableShow(false)}>{props.islangRus === true ? 'Превью' : 'Preview'}</button>
                     </span>
+                    <span className={s.thirdRow}>
+                        <div><input value={props.findWord} onClick={IsClickedField} onChange={UserText}></input></div>
+                        
+                        <div><img src={find} alt='' className={s.lang} onClick={IsClickedButton}/></div>
+                    </span>
                     <span className={s.lastRow}>
                         {props.islangRus === true ?
                             <button className={s.lang} onClick={() => { TurnLang(false) }}>Русский</button> :
@@ -54,21 +72,24 @@ const Users = (props) => {
                 </div>
 
                 {props.isTable === true ?
+                    props.users.length > 1 ?
                     <table className = {s.table}>
                         <Table users = {props.users}
                             isFollow = {isFollow}
                             isUnfollow = {isUnfollow}
                             islangRus = {props.islangRus} />
 
-                    </table> :
+                    </table>: <div>{props.islangRus === true ? 'Пользователь с таким именем не найден' : 'Can not find such user'}
+                       </div> :
+                     props.users.length > 0 ?
                     <div>
-
                         <Show users={props.users}
                             isFollow = {isFollow}
                             isUnfollow = {isUnfollow}
                             islangRus = {props.islangRus} />
 
-                    </div>}
+                    </div>: <div>{props.islangRus === true ? 'Пользователь с таким именем не найден' : 'Can not find such user'}
+                       </div>}
             </div>
 
         </div>

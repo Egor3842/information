@@ -28,12 +28,14 @@
 
 }
 .Sort {
-    left:7%;
+    top:10%;
+    left:10%;
    text-align: left;
    position: relative;
 }
 .View{
-    left:20%;
+    top:10%;
+    left:25%;
     position: relative;
     text-align: left;
 }
@@ -46,12 +48,13 @@
 }
 
 .Row{
-    width: 800px;
+    width: 900px;
     height: 140px;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'F S';
+   
 }
 .firstRow{
     grid-area: F;
@@ -60,11 +63,27 @@
     grid-area: S;
     
 }
+.thirdRow{
+   display: inline-flex;
+    position: absolute;
+    top:-1em;
+    right: 15%;
+}
+.thirdRow img {
+    position: relative;
+    top:0.15em;
+    left: 0.3em;
+    width: 25px;
+    height: 25px;
+}
+
 .lastRow{
     position: absolute;
-   top:2.7em;
-    right: 5%;
+   top:-1em;
+    right: 2%;
 }
+
+
 .Params{
     margin-top: 10px;
 }

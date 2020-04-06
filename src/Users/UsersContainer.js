@@ -1,6 +1,9 @@
 import {connect} from 'react-redux'
 import Users from './Users'
-import {SetFollow,SetUnfollow,TableShow,IsSortedAction,Sorted,ChooseLang} from '../redux/UsersReducer'
+import {SetFollow,SetUnfollow,
+    TableShow,IsSortedAction,
+    Sorted,ChooseLang,
+    WordToFind,ClickButton} from '../redux/UsersReducer'
 
 
 import React from 'react'
@@ -19,7 +22,10 @@ class UsersContainer extends React.Component
         field={this.props.field}
         isSorted={this.props.isSorted}
         islangRus={this.props.islangRus}
-        ChooseLang={this.props.ChooseLang}/>
+        ChooseLang={this.props.ChooseLang}
+        WordToFind={this.props.WordToFind}
+        ClickButton={this.props.ClickButton}
+        findWord={this.props.findWord}/>
        
 
         
@@ -33,10 +39,11 @@ let mapStateToProps=(state)=>{
             isTable:state.UsersReducer.isTable,
             field:state.UsersReducer.field,
             isSorted:state.UsersReducer.isSorted,
-            islangRus:state.UsersReducer.islangRus
+            islangRus:state.UsersReducer.islangRus,
+            findWord:state.UsersReducer.findWord
     }
 }
 
 
 export default connect(mapStateToProps,
-    {SetFollow,SetUnfollow,TableShow,IsSortedAction,Sorted,ChooseLang})(UsersContainer)
+    {SetFollow,ClickButton,WordToFind,SetUnfollow,TableShow,IsSortedAction,Sorted,ChooseLang})(UsersContainer)
