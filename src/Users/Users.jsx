@@ -26,7 +26,7 @@ const Users = (props) => {
     return (
         
         <div className={s.container}>
-             <BrowserRouter>  
+            
             <div className={s.MainContent}>
             <div className={s.Row}>
                <span className={s.firstRow}>
@@ -70,7 +70,7 @@ const Users = (props) => {
                       
                 </div>}      
                 </div>
-                </BrowserRouter>
+              
         </div>
     )
 }
