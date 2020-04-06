@@ -1,0 +1,224 @@
+.container{
+    width:900px ;
+    position: relative;
+    margin: 0 auto;
+    background-image: url(../images/background.png);
+    background-size: 100%;
+    
+}
+.MainContent{
+    position: relative;
+    top:30px;
+}
+ .secondRow button{
+    width: 120px;
+    height: 70px;
+    border: none;
+}
+ .firstRow button{
+    width: 120px;
+    height: 30px;
+    border: none;
+}
+.lang{
+    border: none;
+    background-color: rgb(230, 230, 230);
+    width:80px ;
+    height: 30px ;
+
+}
+.Sort {
+    left:7%;
+   text-align: left;
+   position: relative;
+}
+.View{
+    left:20%;
+    position: relative;
+    text-align: left;
+}
+.notActive{
+    
+    background-color: white;
+}
+.active{
+    background-color: rgb(230, 230, 230);
+}
+
+.Row{
+    width: 800px;
+    height: 140px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'F S';
+}
+.firstRow{
+    grid-area: F;
+}
+.secondRow{
+    grid-area: S;
+    
+}
+.lastRow{
+    position: absolute;
+   top:2.7em;
+    right: 5%;
+}
+.Params{
+    margin-top: 10px;
+}
+.Params button {
+    width: 180px;
+}
+.table{
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 5px 2px;
+  
+}
+TR {
+    padding: 3px; 
+    border: 0.1px solid black; 
+   }
+ .imgcontainer{
+     width: 100%;
+     height: 100%;
+ }
+ .imgcontainer img {
+     width: 60px;
+     height: 60px;
+ }
+ .first{
+     width: 100px;
+ }
+
+ .second{
+     width: 150px;
+     float: left;
+ }
+ .td{
+     width: 100px;
+ }
+ .third{
+     width: 60px;
+ }
+ tbody{
+    background-color: white;
+}
+.last{
+    width: 20px;
+    height: 20px;
+} 
+.last img{
+    height: 15px;
+}
+.Container{
+    position: relative;
+    left:5%;
+    
+    width: 810px;
+   display: flex;
+   flex-wrap: wrap;
+    justify-content: space-between;
+    
+    text-align: left;
+  
+    
+}
+.MainTable{
+    animation: Opacity 3s;
+}
+
+@keyframes Opacity {   
+  0% {     
+    opacity: 0;  
+  }   
+  50% {     
+   opacity: 0.5;   
+  } 
+  100% {
+   opacity: 1;
+   }
+}
+.video{
+   position: absolute;
+   width: 400px;
+    height: 300px;
+    right: 0%;
+    top:0%;
+}
+.video video{
+    width: 100%;
+    height: 100%;
+}
+.player{
+    width: 100%;
+    height: 100%;
+    position: relative;
+   
+    
+}
+.Small{
+    grid-area: S;
+    width: 400px;
+    height: 300px;
+    box-shadow: 0 0 5px 2px;
+    position: relative;
+    background-color: white;
+   margin-top: 10px;
+ 
+   animation: Opacity 3s;
+   
+}
+.Big{
+    grid-area: B;
+    width: 810px;
+    height: 300px;
+    box-shadow: 0 0 5px 2px;
+    position: relative;
+    background-color: white;
+    animation: Opacity 3s;
+    margin-top: 10px;
+  
+}
+
+.img img{
+    width: 50px;
+    height: 50px;
+}
+.name{
+    position: relative;
+    top: -1em;
+    left:1em;
+
+}
+
+.age{
+    position: relative;
+    top:1em;
+    color: rgb(176, 176, 176);
+}
+.phone{
+    position: relative;
+    top:2em;
+}
+.phrase{
+    position: relative;
+    width: 70%;
+    top:3em;
+}
+.star{
+    position: relative;
+    float: right;
+    right: 2em;
+    top:40%;
+    
+}
+.content{
+    position: absolute;
+    left:1em;
+    top:1em;
+    width: 400px;
+}
