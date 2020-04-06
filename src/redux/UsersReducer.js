@@ -66,6 +66,8 @@ const UsersReducer = (state = initialState, action) => {
                         return { ...state, field: action.field, users: mass }
                     }
                 }
+           default:
+               return state.users
             }
         }
         case ISSORTED: {

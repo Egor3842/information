@@ -21,25 +21,25 @@ const Table = (props) => {
 
         <tr className={s.MainTable}>
           <td className={s.first}><div className={s.imgcontainer}>{
-            u.image == 'sheep' ? <img src={sheep} /> :
-              u.image == 'raccoon' ? <img src={raccoon} /> :
-                u.image == 'owl' ? <img src={owl} /> :
-                  u.image == 'dog' ? <img src={dog} /> :
-                    u.image == 'fox' ? <img src={fox} /> :
-                      u.image == 'koala' ? <img src={koala} /> :
-                        u.image == 'penguin' ? <img src={penguin} /> :
-                          u.image == 'pig' ? <img src={pig} /> :
-                            u.image == 'cat' ? <img src={cat} /> :
-                              <img src={lion} />}</div></td>
-          <td className={s.td}><div className={s.second}>{u.name}</div></td>
-          <td >{props.islangRus===true?(u.age % 10 === 2 ||
+            u.image === 'sheep' ? <img alt = '' src = {sheep} /> :
+              u.image === 'raccoon' ? <img alt = '' src = {raccoon} /> :
+                u.image === 'owl' ? <img alt = '' src = {owl} /> :
+                  u.image === 'dog' ? <img alt = '' src = {dog} /> :
+                    u.image === 'fox' ? <img alt = '' src = {fox} /> :
+                      u.image === 'koala' ? <img alt = '' src = {koala} /> :
+                        u.image === 'penguin' ? <img alt = '' src = {penguin} /> :
+                          u.image === 'pig' ? <img alt = '' src = {pig} /> :
+                            u.image === 'cat' ? <img alt = '' src = {cat} /> :
+                              <img alt = '' src = {lion} />}</div></td>
+          <td className = {s.td}><div className = {s.second}>{u.name}</div></td>
+          <td >{props.islangRus === true ? (u.age % 10 === 2 ||
             u.age % 10 === 3 ||
             u.age % 10 === 4 ? <div className={s.third}>{u.age} года</div> :
             u.age % 10 === 1 ? <div className={s.third}>{u.age} год </div> :
-              <div className={s.third}>{u.age} лет </div>):<div className={s.third}>{u.age} years </div>}</td>
-          <td><div className={s.last}> {u.favourite == true ?
-            <img src={FullStar} onClick={() => { props.isFollow(u.id) }} /> :
-            <img src={Star} onClick={() => { props.isUnfollow(u.id) }} />}
+              <div className={s.third}>{u.age} лет </div>) : <div className={s.third}>{u.age} years </div>}</td>
+          <td><div className={s.last}> {u.favourite === true ?
+            <img alt = '' src = {FullStar} onClick={() => { props.isFollow(u.id) }} /> :
+            <img alt = '' src = {Star} onClick={() => { props.isUnfollow(u.id) }} />}
           </div></td>
 
         </tr>
