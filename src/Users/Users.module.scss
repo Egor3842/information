@@ -146,6 +146,14 @@ TR {
   
     
 }
+button:active {
+    -webkit-transform: scale(2, 2);
+  transform: scale(2, 2);
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s;
+  }
+
 .MainTable{
     animation: Opacity 3s;
 }
