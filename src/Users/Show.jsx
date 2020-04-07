@@ -54,10 +54,10 @@ const Show = (props) => {
 
                     {u.video === undefined ? '' :
                         <div className={s.video}>{u.video === 'boy' ?
-                            <video className = {s.player} preload='none' controlsList='nodownload' type="video/mp4" controls src={boy}></video>
+                            <video autoPlay className = {s.player} preload='none' controlsList='nodownload' type="video/mp4" controls src={boy}></video>
 
                             :
-                            <video className = {s.player} preload='none' controlsList='nodownload' type="video/mp4" controls src={shoe}></video>
+                            <video autoPlay className = {s.player} preload='none' controlsList='nodownload' type="video/mp4" controls src={shoe}></video>
                         }</div>}
 
                 </div>)}
